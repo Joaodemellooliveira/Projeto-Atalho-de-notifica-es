@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./main.css" rel="stylesheet">
+    <title>Atalho de notificações</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./Images/sino.png" alt="logo de sino de notificação" />
+            <h1>Atalho de notificações</h1>
+        </header>
+        <form id="form-info-aluno">
+            <textarea required id="textarea-info" placeholder="Cole a informação aqui" title="Cole a informação aqui"></textarea>
+            <button id="button-criar" type="submit">Criar</button>
+            <button id="button-limpar" onClick="window.location.reload();">Limpar</button>
+        </form>
+        <div class="articles" id="articles">
+            <article>
+                <h3>Não entrou</h3>
+                <p id="notificacao-entrada"></p>
+                <button title="Copiar ao clipboard" onclick="navigator.clipboard.writeText(alunoNaoEntrou)"><img src="./Images/copy.png" alt="logo de copiar"/></button>
+            </article>
+            <article>
+                <h3>Aluno veio</h3>
+                <p id="notificacao-veio"></p>
+                <button title="Copiar ao clipboard" onclick="navigator.clipboard.writeText(alunoVeio)"><img src="./Images/copy.png" alt="logo de copiar"/></button>
+            </article>
+            <article>
+                <h3>Aluno faltou</h3>
+                <p id="notificacao-faltou"></p>
+                <button title="Copiar ao clipboard" onclick="navigator.clipboard.writeText(alunoFaltou)"><img src="./Images/copy.png" alt="logo de copiar"/></button>
+            </article>
+            <article>
+                <h3>Remarcar</h3>
+                <p id="notificacao-reagendou"></p>
+                <button title="Copiar ao clipboard" onclick="navigator.clipboard.writeText(alunoRemarcou)"><img src="./Images/copy.png" alt="logo de copiar"/></button>
+            </article>
+            <article>
+                <h3>Confirmar link</h3>
+                <p id="notificacao-confirmar"></p>
+                <button title="Copiar ao clipboard" onclick="navigator.clipboard.writeText(alunoConfirmar)"><img src="./Images/copy.png" alt="logo de copiar"/></button>
+            </article>
+        </div>
+        <footer>
+            <p>Criado por João de Mello</p>
+            <p>&copy 2024 - All rights reserved</p>
+        </footer>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
