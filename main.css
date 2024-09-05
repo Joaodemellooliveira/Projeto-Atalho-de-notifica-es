@@ -34,6 +34,10 @@ header h1{
     font-weight: bold;
 }
 
+.animate-form{
+    display: none;
+}
+
 form{
     display: flex;
     width: 100%;
@@ -49,14 +53,15 @@ form textarea{
     width: 200px;
     resize: none;
     border-bottom: 2px solid #494949;
+    padding-top: 16px;
 }
 
 form textarea::placeholder{
     text-align: center;
-    padding-top: 16px;
 }
 
-form button{
+form button,
+#button-vendedor{
     height: 50px;
     margin-left: 20px;
     border: none;
@@ -66,6 +71,17 @@ form button{
     font-weight: bold;
     border-radius: 15%;
     cursor: pointer;
+}
+
+#button-vendedor{
+    padding: auto 8px;
+    width: 90px;
+    background-color: #b90a5c;
+    color: #fff;
+}
+
+#button-vendedor:hover{
+    background-color: #f83490;
 }
 
 #button-criar{
@@ -84,8 +100,18 @@ form button{
     background-color: rgba(253, 253, 138, 0.855);
 }
 
-.articles{
+hr{
+    background-color: #fb449a;
+    height: 10px;
+    border: none;
+}
+
+.animate-shortcuts{
     display: none;
+}
+
+.articles{
+    display: flex;
     flex-wrap: wrap;
     justify-content: left;
     padding: 0 16px;

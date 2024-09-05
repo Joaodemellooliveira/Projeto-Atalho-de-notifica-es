@@ -6,18 +6,24 @@ var alunoVeio;
 var alunoRemarcou;
 var alunoConfirmar;
 
-form.addEventListener('submit', function(e){
+$('#button-vendedor').click(function (e) { 
     e.preventDefault();
 
+    $('.animate-form').slideToggle();
+});
+
+$('form').on('submit', function (e) { 
+    e.preventDefault();
+    
     fillArray();
     generateNotifications();
     atualizaNotificacoes();
-    document.getElementById('articles').style.display = 'flex';
+    $('.animate-shortcuts').slideDown();
 });
 
+
 function fillArray(){
-    const inputTextArea = document.getElementById('textarea-info');
-    alunoInfo = inputTextArea.value.split("\n");
+    alunoInfo = $('#textarea-info').val().split('\n');
 };
 
 function generateNotifications(){
@@ -35,13 +41,14 @@ function generateNotifications(){
 };
 
 function atualizaNotificacoes(){
-    document.getElementById('notificacao-entrada').innerHTML = alunoNaoEntrou.replaceAll("\n", "<br/>");
 
-    document.getElementById('notificacao-veio').innerHTML = alunoVeio.replaceAll("\n", "<br/>");
+    $('#notificacao-entrada').html(alunoNaoEntrou.replaceAll("\n", "<br/>"));
 
-    document.getElementById('notificacao-faltou').innerHTML = alunoFaltou.replaceAll("\n", "<br/>");
+    $('#notificacao-veio').html(alunoVeio.replaceAll("\n", "<br/>"));
 
-    document.getElementById('notificacao-reagendou').innerHTML = alunoRemarcou.replaceAll("\n", "<br/>");
+    $('#notificacao-faltou').html(alunoFaltou.replaceAll("\n", "<br/>"));
 
-    document.getElementById('notificacao-confirmar').innerHTML = alunoConfirmar.replaceAll("\n", "<br/>");
+    $('#notificacao-reagendou').html(alunoRemarcou.replaceAll("\n", "<br/>"));
+
+    $('#notificacao-confirmar').html(alunoConfirmar.replaceAll("\n", "<br/>"));
 };
