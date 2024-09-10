@@ -29,15 +29,15 @@ function fillArray(){
 function generateNotifications(){
     var textoBase = `${alunoInfo[0]}\n${alunoInfo[1]}\n${alunoInfo[2]}\n${alunoInfo[3]}\n${alunoInfo[4]}`;
     
-    alunoNaoEntrou = `🟡${textoBase}🟡\nAluno ainda não entrou na sala`;
+    alunoNaoEntrou = `🟡${textoBase}\nAluno não entrou🟡`;
 
-    alunoVeio = `✅${textoBase}✅\nForms enviado`;
+    alunoVeio = `✅${textoBase}\nEncerrada✅`;
 
-    alunoFaltou = `❌${textoBase}❌\nAluno faltou`;
+    alunoFaltou = `❌${textoBase}\nFalta❌`;
 
-    alunoRemarcou = `📅${textoBase}📅\nAluno pediu reagendamento`;
+    alunoRemarcou = `📅${textoBase}\nReagendamento📅`;
 
-    alunoConfirmar = `⚠️${textoBase}⚠️\nConfirmar link`;
+    alunoConfirmar = `⚠️${textoBase}\nConfirmar link⚠️`;
 };
 
 function atualizaNotificacoes(){
